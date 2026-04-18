@@ -1,0 +1,193 @@
+/* About Section Refinement */
+.about-premium-section {
+  background: #080808;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.editorial-tag {
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 25px;
+  opacity: 0.8;
+}
+
+.editorial-title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #fff !important; /* Ensure visibility */
+  letter-spacing: -2px;
+}
+
+.description-text {
+  font-size: 1.15rem;
+  line-height: 2;
+  color: #ccc !important; /* Lighter color for visibility */
+  max-width: 90%;
+}
+
+.light-highlight {
+  color: var(--primary) !important;
+  font-style: italic;
+}
+
+/* Honor Cards Design */
+.honor-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.honor-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.honor-card:hover {
+  background: rgba(212, 175, 55, 0.05);
+  border-color: var(--primary);
+  transform: translateY(-5px);
+}
+
+.card-inner {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.card-icon-box {
+  width: 50px;
+  height: 50px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon-box i {
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+
+.card-info h4 {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.honor-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.honor-list li {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.honor-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 1px;
+  background: var(--primary);
+}
+
+/* Single Image Layout Fix */
+.editorial-single-image-wrapper {
+  position: relative;
+  height: 600px;
+  width: 100%;
+}
+
+.image-main-single {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 50px 100px rgba(0,0,0,0.8);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.float-experience-card-v4 {
+  position: absolute;
+  top: 40px;
+  right: -30px;
+  background: var(--primary);
+  padding: 30px;
+  border-radius: 8px;
+  color: #000;
+  z-index: 5;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Premium Button Set */
+.btn-premium-pill-solid, .btn-premium-pill-glass {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 60px;
+  padding: 0 40px;
+  border-radius: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  min-width: 200px;
+}
+
+.btn-premium-pill-solid {
+  background: var(--primary);
+  color: #000;
+  border: 2px solid var(--primary);
+}
+
+.btn-premium-pill-glass {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Responsive Fixes */
+@media (max-width: 991px) {
+  .editorial-title { font-size: 3rem; }
+  .description-text { max-width: 100%; }
+  .honor-cards-grid { grid-template-columns: 1fr; }
+  .float-experience-card-v4 { right: 10px; padding: 20px; }
+}
+
+@media (max-width: 767px) {
+  .editorial-footer-premium {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-premium-pill-solid, .btn-premium-pill-glass {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .editorial-title { font-size: 2.5rem; }
+}

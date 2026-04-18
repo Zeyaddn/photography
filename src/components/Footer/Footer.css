@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Footer Component Styles
+   ========================================================================== */
+
+footer {
+  background: var(--dark);
+  padding: 60px 0 25px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.footer-brand { font-size: 1.4rem; font-weight: 800; color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+.footer-desc { color: var(--light-3); font-size: 0.88rem; max-width: 350px; margin-bottom: 15px; line-height: 1.8; }
+.footer-title { font-size: 1rem; font-weight: 700; color: var(--light); margin-bottom: 18px; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { color: var(--light-3); font-size: 0.85rem; transition: var(--transition-fast); display: flex; align-items: center; gap: 5px; }
+.footer-links a:hover { color: var(--primary); padding-right: 5px; }
+
+.social-links { display: flex; gap: 10px; margin-top: 20px; }
+.social-links a { width: 42px; height: 42px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--light-3); font-size: 1.1rem; transition: var(--transition); }
+.social-links a:hover { background: var(--primary); color: var(--dark); border-color: var(--primary); transform: translateY(-3px); }
+
+.newsletter-form .newsletter-input-wrapper { display: flex; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 50px; overflow: hidden; transition: var(--transition); }
+.newsletter-form .newsletter-input-wrapper:focus-within { border-color: var(--primary); }
+.newsletter-form input { flex: 1; background: transparent; border: none; color: var(--light); padding: 12px 18px; font-family: var(--font-main); font-size: 0.82rem; outline: none; }
+.newsletter-form input::placeholder { color: rgba(255, 255, 255, 0.2); }
+.newsletter-form button { background: var(--primary); border: none; color: var(--dark); padding: 12px 18px; cursor: pointer; font-size: 1rem; transition: var(--transition-fast); }
+.newsletter-form button:hover { background: var(--primary-light); }
+
+.footer-trust { margin-top: 10px; }
+.footer-trust span { font-size: 0.75rem; color: var(--light-3); display: flex; align-items: center; gap: 4px; }
+.footer-trust i { color: var(--success); }
+
+.footer-bottom { border-top: 1px solid var(--glass-border); margin-top: 35px; padding-top: 20px; text-align: center; color: var(--light-3); font-size: 0.82rem; }
+.footer-bottom a { color: var(--primary); }
