@@ -20,7 +20,7 @@ export default function Blog() {
             <div key={i} className="col-lg-4 col-md-6 animate-on-scroll">
               <div className="blog-card">
                 <div className="blog-card-img" style={{ position: 'relative', height: '240px' }}>
-                  <Image src={b.img} alt={b.title} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+                  <Image src={b.img} alt={b.title} fill sizes="(max-width: 768px) 100vw, 33vw" loading="lazy" style={{ objectFit: 'cover' }} />
                   <div className="blog-date-badge">
                     <span className="day">{b.day}</span>
                     <span className="month">{b.month}</span>

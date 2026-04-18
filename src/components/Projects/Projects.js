@@ -20,7 +20,7 @@ export default function Projects() {
             <div key={i} className="col-lg-4 col-md-6 animate-on-scroll">
               <div className="project-card" style={{ background: '#111', borderRadius: '15px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)' }}>
                 <div className="project-card-img" style={{ position: 'relative', height: '280px' }}>
-                  <Image src={p.img} alt={p.title} fill sizes="(max-width: 768px) 100vw, 33vw" priority={i < 2} style={{ objectFit: 'cover' }} />
+                  <Image src={p.img} alt={p.title} fill sizes="(max-width: 768px) 100vw, 33vw" priority={i < 2} loading={i < 2 ? "eager" : "lazy"} style={{ objectFit: 'cover' }} />
                   <span className="project-badge" style={{ position: 'absolute', top: '20px', right: '20px', background: 'rgba(0,0,0,0.6)', color: '#fff', padding: '5px 15px', borderRadius: '20px', fontSize: '0.75rem', backdropFilter: 'blur(5px)' }}>
                     <i className={`bx ${p.icon}`}></i> {p.cat}
                   </span>

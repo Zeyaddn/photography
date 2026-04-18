@@ -13,6 +13,8 @@ export default function About() {
                   src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32" 
                   alt="Vintage Leica Camera" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  loading="lazy"
                   style={{ objectFit: 'cover' }} 
                 />
               </div>

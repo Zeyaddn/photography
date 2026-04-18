@@ -32,6 +32,7 @@ export default function Hero() {
               alt={slide.alt}
               fill
               priority={index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
               quality={80}
               sizes="100vw"
               style={{ objectFit: 'cover' }}

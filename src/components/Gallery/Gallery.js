@@ -51,6 +51,7 @@ export default function Gallery() {
                   alt={item.title} 
                   fill
                   priority={i < 3}
+                  loading={i >= 3 ? "lazy" : "eager"}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   style={{ objectFit: 'cover' }}
                 />
@@ -76,6 +77,33 @@ export default function Gallery() {
         index={lightboxIndex >= 0 ? lightboxIndex : 0}
         close={() => setLightboxIndex(-1)}
         slides={slides}
+        styles={{ container: { backgroundColor: "rgba(0, 0, 0, 0.95)" } }}
+        controller={{ preload: 2 }}
+        carousel={{ finite: false, preload: 3 }}
+        render={{
+          slide: ({ slide, rect }) => {
+            const width = Math.min(rect.width, (slide.width || rect.width));
+            const height = Math.min(rect.height, (slide.height || rect.height));
+
+            return (
+              <div style={{ position: "relative", width: "100%", height: "100%" }}>
+                <Image
+                  fill
+                  src={slide.src}
+                  alt={slide.alt}
+                  loading="lazy"
+                    draggable={false}
+                  quality={85}
+                  sizes={`${Math.ceil((width / window.innerWidth) * 100)}vw`}
+                  style={{
+                    objectFit: "contain",
+                    cursor: "auto",
+                  }}
+                />
+              </div>
+            );
+          },
+        }}
       />
     </section>
   );
