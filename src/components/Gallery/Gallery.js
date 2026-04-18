@@ -86,20 +86,30 @@ export default function Gallery() {
             const height = Math.min(rect.height, (slide.height || rect.height));
 
             return (
-              <div style={{ position: "relative", width: "100%", height: "100%" }}>
+              <div className="lightbox-image-container" style={{ 
+                position: "relative", 
+                width: width, 
+                height: height,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
                 <Image
                   fill
                   src={slide.src}
-                  alt={slide.alt}
+                  alt={slide.alt || "Gallery Image"}
                   loading="lazy"
-                    draggable={false}
-                  quality={85}
+                  draggable={false}
+                  quality={90}
                   sizes={`${Math.ceil((width / window.innerWidth) * 100)}vw`}
                   style={{
                     objectFit: "contain",
                     cursor: "auto",
                   }}
                 />
+                {/* Persistent Watermark in Lightbox */}
+                <div className="lightbox-watermark-logo">Zeyad LENS</div>
+                <div className="lightbox-copyright">© Lens of Creativity | All Rights Reserved</div>
               </div>
             );
           },

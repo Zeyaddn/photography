@@ -36,13 +36,20 @@
 
 /* ===== Reset & Base ===== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { 
+  scroll-behavior: smooth; 
+  scroll-padding-top: 80px; 
+  overflow-x: hidden;
+  width: 100%;
+}
 
 body {
   font-family: var(--font-main);
   background-color: var(--dark);
   color: var(--light);
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
   direction: ltr;
   line-height: 1.8;
 }

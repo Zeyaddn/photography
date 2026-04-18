@@ -7,6 +7,9 @@
   transition: var(--transition);
   background: transparent;
   z-index: 1000;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .navbar.scrolled {
@@ -183,7 +186,7 @@
   .navbar-collapse {
     position: fixed !important;
     top: 0;
-    right: 0 !important;
+    right: -310px !important; /* Move off-screen without causing overflow */
     left: auto !important;
     width: 300px !important;
     height: 100vh !important;
@@ -196,13 +199,13 @@
     z-index: 10000;
     margin: 0 !important;
     padding: 30px !important;
-    transition: none !important;
-    transform: translateX(100%);
+    transition: all 0.4s cubic-bezier(0.77,0,0.175,1) !important;
+    transform: none !important; /* Use right instead of transform for safer mobile rendering */
     box-shadow: -20px 0 60px rgba(0,0,0,0.8);
   }
 
   .navbar-collapse.show {
-    transform: translateX(0) !important;
+    right: 0 !important;
   }
 
   .navbar-nav {
